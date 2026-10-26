@@ -22,3 +22,15 @@
 .sus-hero{background:radial-gradient(ellipse at 18% 0%,#74cafa77,transparent 52%),linear-gradient(165deg,#1B67FE,#1388d8 60%,#07509f)}
 .tech-benefits{background:linear-gradient(130deg,#0d2d7c,#1b67fe)}
 @media(max-width:760px){.logo img{width:155px}.footer-top .logo img{width:192px}}
+
+/* Official blue footer and white typography */
+.site-footer{background:#1B67FE!important;color:#fff!important}
+.site-footer .logo img{width:210px}
+.site-footer p,.site-footer .footer-top p,.site-footer .footer-bottom,.site-footer .footer-bottom span,.site-footer a,.site-footer .footer-nav a,.site-footer .footer-legal a{color:#fff!important}
+.site-footer .footer-nav a,.site-footer .footer-legal a{font-weight:400;text-decoration:none}
+.site-footer .footer-nav a:hover,.site-footer .footer-legal a:hover,.site-footer a[href^="mailto:"]:hover{text-decoration:underline;text-underline-offset:4px}
+.site-footer .footer-bottom{border-top:1px solid rgba(255,255,255,.4)!important;align-items:center;flex-wrap:wrap}
+.footer-legal{display:flex;flex-wrap:wrap;align-items:center;gap:12px 22px}
+.footer-legal a{font-size:12px;line-height:1.7}
+.footer-legal a:first-child{font-weight:700}
+@media(max-width:760px){.footer-legal{gap:10px 15px}.site-footer .logo img{width:190px}}
