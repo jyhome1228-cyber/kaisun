@@ -90,3 +90,21 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
 @media(max-width:1050px){.container{width:calc(100% - 64px)}.nav{gap:14px}.nav a,.nav-brand-trigger{font-size:11px}.grid.four{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:760px){body{font-size:16px}.container{width:calc(100% - 36px)}.site-header{height:68px}.section{padding:78px 0}.section-head{margin-bottom:32px;display:block}.section-head p{font-size:15px;margin-top:15px}.hero{min-height:600px}.hero h1,.page-intro h1{font-size:clamp(42px,10vw,56px)}.hero p,.page-intro p,.text-block p,.tech-copy,.sus-feature p{font-size:15px}.page-intro{padding:80px 0 70px}.text-block h2,.section-head h2,.section-title,.tech-heading{font-size:clamp(29px,7.2vw,38px)}.card{padding:26px;min-height:205px}.grid{gap:16px}.brand-panel{min-height:285px;padding:28px}.site-footer{padding:65px 0 25px}.site-footer .footer-top{padding-bottom:38px}.research-card{min-height:180px}.btn{width:auto}.sus-hero h1{font-size:clamp(37px,9vw,52px)}}
 @media(prefers-reduced-motion:reduce){.reveal{transition:none;opacity:1;transform:none}}
+
+/* Blank image slots until approved source photography is supplied. No stock or mock imagery. */
+.visual,.tech-art,.sus-art{background:#f7f7f7!important;background-image:none!important;border:1px solid #e8e8e8;box-shadow:none}
+.visual:after,.tech-art:after,.sus-art:after,.sus-art:before{content:none!important;display:none!important}
+.visual small,.tech-art span,.sus-art span{display:none!important}
+.sus-art-circular{display:block;padding:0}
+.brand-panel,.brand-panel:nth-child(2),.brand-panel-clrx{background:#fff!important;min-height:0;padding:0;border:0;border-radius:0;display:flex;flex-direction:column;justify-content:flex-start;gap:0}
+.brand-panel:before{content:"";display:block;aspect-ratio:4/3;border:1px solid #e8e8e8;border-radius:14px;background:#f7f7f7;margin-bottom:24px}
+.brand-panel h3{margin:10px 0 8px}
+.brand-panel p{margin:0}
+.brand-panel .brand-status{margin-top:12px}
+.brand-panel:hover h3{color:#1B67FE}
+.research-card{display:flex;flex-direction:column;justify-content:flex-start;gap:0}
+.research-card:before{content:"";display:block;width:100%;aspect-ratio:1.43;border:1px solid #e8e8e8;background:#f7f7f7;border-radius:12px;margin-bottom:20px;flex-shrink:0}
+.research-card .num{margin-bottom:12px}
+.research-card h3{margin:0 0 9px}
+.research-card .card-link{margin-top:14px}
+@media(max-width:760px){.brand-panel:before{margin-bottom:18px}.research-card:before{margin-bottom:15px}}
