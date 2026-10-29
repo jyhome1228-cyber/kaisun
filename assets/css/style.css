@@ -382,3 +382,11 @@ body[data-page="about"] .content-split{grid-template-columns:minmax(0,1fr) minma
 body[data-page="about"] .content-split>div{min-width:0}
 body[data-page="about"] .content-pair p{max-width:660px;line-height:1.82}
 @media(max-width:760px){body[data-page="about"] .content-split{grid-template-columns:1fr}body[data-page="about"] .about-symbol-image{aspect-ratio:1.16/1}body[data-page="about"] .about-symbol-image img{max-height:none}}
+
+/* Home hero copy positioned below optical centre */
+body[data-page="home"] .parallax-hero .hero-content{transform:translateY(8vh);padding-top:120px;padding-bottom:120px}
+body[data-page="home"] .home-research-image{overflow:hidden}
+body[data-page="home"] .home-research-image img{width:100%;height:100%;object-fit:cover;display:block}
+body[data-page="home"] .content-line{display:grid;grid-template-columns:minmax(245px,1fr) minmax(0,1.35fr) 26px;align-items:center;gap:24px}
+body[data-page="home"] .content-line h3{min-width:0;overflow-wrap:normal;word-break:keep-all}
+@media(max-width:760px){body[data-page="home"] .parallax-hero .hero-content{transform:translateY(3vh);padding-top:120px;padding-bottom:110px}body[data-page="home"] .content-line{grid-template-columns:minmax(0,1fr) 20px;gap:12px}body[data-page="home"] .content-line h3{grid-column:1}body[data-page="home"] .content-line p{grid-column:1}body[data-page="home"] .content-line .arrow{grid-column:2}}
