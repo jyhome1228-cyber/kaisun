@@ -334,3 +334,8 @@ body main .content-heading h2{margin-bottom:15px}
 .ks-solutions-note{padding:23px 0;border-top:1px solid #ededed}
 .ks-solutions-note p{font-size:13px;line-height:1.8;color:#767676;margin:0}
 @media(max-width:760px){.ks-solutions-hero h1{font-size:34px}.ks-solutions-hero p,.ks-approach-heading p{font-size:16px}.ks-approach-heading h2{font-size:29px}.ks-approach-steps{grid-template-columns:1fr;gap:25px;margin-top:38px}.ks-approach-steps h3{font-size:20px}.ks-solution-layout{grid-template-columns:1fr;gap:32px}.ks-solution-reverse .ks-solution-copy,.ks-solution-reverse .ks-solution-image{order:initial}.ks-solution-copy h2{font-size:29px}.ks-solution-copy h3{font-size:19px}.ks-solution-copy p{font-size:16px;line-height:1.78}.ks-solution-image{aspect-ratio:4/3}}
+
+/* Research archive: immediate content after global header */
+body[data-page="research"] .research-archive-first{padding-top:72px}
+body[data-page="research"] .research-archive-first .content-heading{margin-bottom:42px}
+@media(max-width:760px){body[data-page="research"] .research-archive-first{padding-top:48px}body[data-page="research"] .research-archive-first .content-heading{margin-bottom:30px}}
