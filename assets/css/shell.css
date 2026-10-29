@@ -48,3 +48,13 @@ body[data-page="home"] #site-header .header-over-hero .nav-submenu a{color:#111}
 #site-footer .footer-nav{max-width:480px;grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:600px){#site-header .site-header{height:70px}#site-header .logo img{width:164px}#site-footer .site-footer{padding-top:50px}#site-footer .footer-nav{row-gap:15px}#site-footer .footer-bottom{margin-top:38px}body[data-page="home"] #site-header .site-header.header-over-hero{background:transparent}}
+
+/* Home header state: overlay at top, fixed white immediately after scroll */
+body[data-page="home"] #site-header .site-header{position:fixed!important;inset:0 0 auto!important;width:100%;transition:background-color .28s ease,border-color .28s ease,box-shadow .28s ease}
+body[data-page="home"] #site-header .site-header.header-scrolled{background:#fff!important;border-bottom:1px solid #e8edf3!important;backdrop-filter:blur(14px)!important;box-shadow:0 2px 12px rgba(0,0,0,.035)!important}
+body[data-page="home"] #site-header .site-header.header-scrolled .nav>a,
+body[data-page="home"] #site-header .site-header.header-scrolled .nav-brand-trigger{color:#141414!important}
+body[data-page="home"] #site-header .site-header.header-scrolled .nav>a:hover,
+body[data-page="home"] #site-header .site-header.header-scrolled .nav>a[aria-current="page"],
+body[data-page="home"] #site-header .site-header.header-scrolled .nav-brand-trigger:hover{color:#1C67FE!important}
+@media(max-width:980px){body[data-page="home"] #site-header .site-header{background:#fff!important;border-bottom:1px solid #e8edf3!important}body[data-page="home"] #site-header .menu-toggle{color:#141414!important}}
