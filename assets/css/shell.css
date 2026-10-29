@@ -58,3 +58,20 @@ body[data-page="home"] #site-header .site-header.header-scrolled .nav>a:hover,
 body[data-page="home"] #site-header .site-header.header-scrolled .nav>a[aria-current="page"],
 body[data-page="home"] #site-header .site-header.header-scrolled .nav-brand-trigger:hover{color:#1C67FE!important}
 @media(max-width:980px){body[data-page="home"] #site-header .site-header{background:#fff!important;border-bottom:1px solid #e8edf3!important}body[data-page="home"] #site-header .menu-toggle{color:#141414!important}}
+
+/* Navigation typography and language selector */
+#site-header .nav>a,#site-header .nav-brand-trigger{font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo",sans-serif!important;font-size:14px!important;font-weight:600;letter-spacing:-.015em}
+#site-header .header-inner{gap:24px}
+#site-header .nav{gap:clamp(14px,1.6vw,25px)}
+#site-header .language-switcher{position:relative;display:flex;align-items:center;margin-left:7px;flex-shrink:0}
+#site-header .language-trigger{display:inline-flex;align-items:center;gap:7px;border:0;background:none;padding:10px 2px;font-family:Pretendard,sans-serif;font-size:12px;font-weight:600;color:#171717;cursor:pointer}
+#site-header .language-trigger .nav-caret{margin-left:3px}
+#site-header .language-options{display:none;position:absolute;top:calc(100% + 13px);right:0;min-width:165px;background:#fff;border:1px solid #e7ebf2;border-radius:12px;box-shadow:0 12px 30px rgba(0,0,0,.09);padding:7px;z-index:120}
+#site-header .language-switcher.open .language-options{display:grid}
+#site-header .language-options button{display:flex;align-items:center;justify-content:space-between;gap:20px;white-space:nowrap;padding:11px 10px;background:none;border:0;border-radius:7px;color:#171717;font:500 13px/1.4 Pretendard,sans-serif;text-align:left;cursor:pointer}
+#site-header .language-options button:hover,#site-header .language-options button[aria-current="true"]{background:#f3f7ff;color:#1C67FE}
+#site-header .language-options small{font-size:11px;color:#828a94}
+body[data-page="home"] #site-header .header-over-hero .language-trigger{color:white}
+body[data-page="home"] #site-header .header-scrolled .language-trigger{color:#171717}
+@media(max-width:980px){#site-header .language-switcher{margin-left:auto;margin-right:7px}#site-header .nav>a,#site-header .nav-brand-trigger{font-size:15px!important}#site-header .language-trigger{color:#171717!important}}
+@media(min-width:981px) and (max-width:1170px){#site-header .nav{gap:12px}#site-header .nav>a,#site-header .nav-brand-trigger{font-size:12.5px!important}}
