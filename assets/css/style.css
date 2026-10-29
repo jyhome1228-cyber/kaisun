@@ -415,3 +415,18 @@ body[data-page="home"] .parallax-hero>.hero-content{transform:none!important;mar
 .brand-visual-grid-two .brand-visual-item{aspect-ratio:16/10}
 body[data-page="brands"] .dentiai-story .dentiai-visual img{object-fit:cover}
 @media(max-width:760px){.brand-visual-grid{grid-template-columns:1fr;gap:14px}.brand-visual-grid .brand-visual-item{aspect-ratio:16/10}}
+
+/* Brand-specific accent colors: public detail pages only */
+body[data-brand="recelleclore"]{--brand-accent:#B64249;--brand-tint:#FCF5F4}
+body[data-brand="clrx"]{--brand-accent:#192D4B;--brand-tint:#F3F6FA}
+body[data-brand] main .eyebrow,
+body[data-brand] main .content-link,
+body[data-brand] main .step-index,
+body[data-brand] main .brand-visual-gallery .eyebrow{color:var(--brand-accent)}
+body[data-brand] main .content-link:hover{opacity:.75}
+body[data-brand] main .section.soft{background:var(--brand-tint)}
+body[data-brand] main .btn.btn-dark{background:var(--brand-accent);border-color:var(--brand-accent);color:#fff}
+body[data-brand] main .btn.btn-dark:hover{filter:brightness(.9)}
+body[data-brand] main .brand-status{color:var(--brand-accent);border-color:var(--brand-accent)}
+body[data-brand] main a:focus-visible{outline-color:var(--brand-accent)}
+/* The shared navigation and footer deliberately keep KAISUNCELL blue. */
