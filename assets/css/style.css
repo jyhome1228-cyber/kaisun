@@ -364,3 +364,13 @@ body[data-page="research"] .research-archive-first .content-heading{margin-botto
 body[data-page="home"] .home-company-symbol{height:auto;aspect-ratio:1.25/1;background:#fff;border:0;display:flex;align-items:center;justify-content:center;overflow:visible}
 body[data-page="home"] .home-company-symbol img{width:100%;height:100%;max-height:610px;object-fit:contain!important;object-position:center;display:block}
 @media(max-width:760px){body[data-page="home"] .home-company-symbol{aspect-ratio:1.25/1}body[data-page="home"] .home-company-symbol img{max-height:none}}
+
+/* Technology values: no reserved number column, proper text width */
+body[data-page="technology"] .tech-values{width:100%;display:block}
+body[data-page="technology"] .tech-values article{display:block;min-width:0;width:100%;padding:27px 0;border-top:1px solid #e8e8e8}
+body[data-page="technology"] .tech-values article>div{display:block;min-width:0;width:100%;max-width:880px}
+body[data-page="technology"] .tech-values h3{font-size:clamp(21px,1.9vw,25px);line-height:1.35;overflow-wrap:normal;word-break:keep-all;margin:0 0 8px}
+body[data-page="technology"] .tech-values h4{font-size:17px;line-height:1.6;word-break:keep-all;margin:0 0 13px}
+body[data-page="technology"] .tech-values p{font-size:16px;line-height:1.8;max-width:840px;word-break:keep-all}
+@media(min-width:900px){body[data-page="technology"] .tech-values article{display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1.35fr);gap:24px}body[data-page="technology"] .tech-values article>div{grid-column:1/-1;display:grid;grid-template-columns:minmax(220px,.65fr) minmax(0,1.35fr);column-gap:24px}body[data-page="technology"] .tech-values h3{grid-column:1;grid-row:1/3}body[data-page="technology"] .tech-values h4,body[data-page="technology"] .tech-values p{grid-column:2}}
+@media(max-width:899px){body[data-page="technology"] .tech-values article,body[data-page="technology"] .tech-values article>div{display:block!important}}
