@@ -308,3 +308,29 @@ body main .content-heading h2{margin-bottom:15px}
 
 /* Technology editorial layout */
 .tech-intro{background:#fff}.tech-intro h1{font-size:clamp(36px,3.5vw,49px);line-height:1.24;max-width:880px}.tech-intro p{max-width:790px}.tech-material .content-heading .eyebrow:empty{display:none}.tech-values{margin:42px 0 55px}.tech-values article{display:grid;grid-template-columns:62px 1fr;gap:25px;padding:34px 0;border-top:1px solid #e8e8e8}.tech-values article:last-child{border-bottom:1px solid #e8e8e8}.tech-values article>span,.tech-application-grid article>span{font-size:12px;font-weight:600;color:#1C67FE;letter-spacing:.06em}.tech-values h3{font-size:23px;font-weight:600;margin:0 0 6px;letter-spacing:-.025em}.tech-values h4{font-size:17px;font-weight:500;margin:0 0 15px;color:#333}.tech-values p{max-width:790px;font-size:16px;line-height:1.83;color:#666;margin:0}.tech-section-lead{font-size:17px;line-height:1.78;color:#666;max-width:860px;margin:0 0 42px}.tech-application-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 42px}.tech-application-grid article{border-top:1px solid #dedede;padding:30px 0 37px}.tech-application-grid h3{font-size:23px;line-height:1.35;font-weight:600;letter-spacing:-.03em;margin:13px 0}.tech-application-grid p{font-size:16px;line-height:1.82;color:#666;margin:0;max-width:580px}.tech-material .content-split>div>p,.tech-intro~.section .content-split>div>p{margin:0 0 19px}.tech-material .content-split>div>p:last-child,.tech-intro~.section .content-split>div>p:last-child{margin-bottom:0}@media(max-width:760px){.tech-intro h1{font-size:34px}.tech-values article{grid-template-columns:34px 1fr;gap:12px;padding:26px 0}.tech-values h3,.tech-application-grid h3{font-size:21px}.tech-values h4{font-size:16px}.tech-values p,.tech-application-grid p{font-size:15px}.tech-application-grid{grid-template-columns:1fr}.tech-section-lead{font-size:16px}}
+
+/* Solutions editorial system */
+.ks-solutions-hero h1{font-size:clamp(36px,3.5vw,49px);line-height:1.23;letter-spacing:-.045em;max-width:950px}
+.ks-solutions-hero p{max-width:800px;line-height:1.8;margin:20px 0 0;font-size:17px;color:#606569}
+.ks-solution-approach{background:#f7f8fa}
+.ks-approach-heading{max-width:810px}
+.ks-approach-heading h2{font-size:clamp(29px,2.7vw,38px);line-height:1.34;font-weight:600;margin:16px 0 25px;letter-spacing:-.038em}
+.ks-approach-heading p{font-size:17px;line-height:1.85;color:#636970}
+.ks-approach-steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:34px;margin-top:56px}
+.ks-approach-steps>div{padding-top:22px;border-top:1px solid #d9dee4}
+.ks-approach-steps span{font-size:12px;letter-spacing:.075em;color:#1C67FE;font-weight:600}
+.ks-approach-steps h3{font-size:22px;letter-spacing:-.03em;font-weight:600;line-height:1.4;margin:18px 0 12px}
+.ks-approach-steps p{font-size:15px;line-height:1.78;color:#60666a;margin:0}
+.ks-solution-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(44px,6.5vw,110px);align-items:center}
+.ks-solution-reverse .ks-solution-copy{order:2}
+.ks-solution-reverse .ks-solution-image{order:1}
+.ks-solution-copy h2{font-size:clamp(28px,2.6vw,37px);letter-spacing:-.04em;line-height:1.3;font-weight:600;margin:16px 0}
+.ks-solution-copy h3{font-size:clamp(19px,1.6vw,22px);line-height:1.45;font-weight:500;letter-spacing:-.025em;margin:0 0 26px}
+.ks-solution-copy p{font-size:16px;color:#60666a;line-height:1.9;margin:0 0 18px}
+.ks-solution-link{display:inline-flex;gap:16px;align-items:center;color:#1C67FE;border-bottom:1px solid #1C67FE;padding-bottom:8px;font-size:14px;font-weight:600;margin-top:12px}
+.ks-solution-link:hover{color:#004cd8}
+.ks-solution-image{aspect-ratio:4/4.4;border-radius:18px;overflow:hidden;background:#eef2f9}
+.ks-solution-image img{width:100%;height:100%;object-fit:cover}
+.ks-solutions-note{padding:23px 0;border-top:1px solid #ededed}
+.ks-solutions-note p{font-size:13px;line-height:1.8;color:#767676;margin:0}
+@media(max-width:760px){.ks-solutions-hero h1{font-size:34px}.ks-solutions-hero p,.ks-approach-heading p{font-size:16px}.ks-approach-heading h2{font-size:29px}.ks-approach-steps{grid-template-columns:1fr;gap:25px;margin-top:38px}.ks-approach-steps h3{font-size:20px}.ks-solution-layout{grid-template-columns:1fr;gap:32px}.ks-solution-reverse .ks-solution-copy,.ks-solution-reverse .ks-solution-image{order:initial}.ks-solution-copy h2{font-size:29px}.ks-solution-copy h3{font-size:19px}.ks-solution-copy p{font-size:16px;line-height:1.78}.ks-solution-image{aspect-ratio:4/3}}
