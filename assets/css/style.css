@@ -122,3 +122,28 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
 .content-image-slot:has(img):hover img{transform:scale(1.018)}
 .content-image-slot img{transition:transform .4s ease}
 @media(prefers-reduced-motion:reduce){.content-image-slot img{transition:none}}
+
+/* Home full-bleed hero / restrained parallax */
+body[data-page="home"] .parallax-hero{position:relative;min-height:100svh;display:flex;align-items:center;isolation:isolate;overflow:hidden;background:#1C67FE;color:#fff;padding:0}
+.parallax-hero .hero-bg-wrap{position:absolute;inset:0;z-index:-1;overflow:hidden}
+.parallax-hero .hero-bg{position:absolute;inset:-7%;background:url("https://nineworksdatabase.planus253.workers.dev/cdn/uncategorized/20261029-035142-1-f1605c2e.webp") center center/cover no-repeat;transform:translate3d(0,0,0) scale(1.06);will-change:transform}
+.parallax-hero .hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,32,89,.60),rgba(5,39,102,.32) 48%,rgba(3,28,74,.10)),linear-gradient(0deg,rgba(1,23,68,.26),transparent 46%)}
+.parallax-hero .hero-content{position:relative;z-index:2;padding-top:180px;padding-bottom:130px}
+.parallax-hero .eyebrow{color:rgba(255,255,255,.85)}
+.parallax-hero h1,.parallax-hero h1 em{font-size:clamp(44px,5vw,76px);line-height:1.12;max-width:1050px;letter-spacing:-.05em;color:white;font-weight:600;margin:0 0 34px}
+.parallax-hero .hero-description{color:rgba(255,255,255,.94);font-size:17px;line-height:1.85;max-width:790px;margin:0 0 34px}
+.parallax-hero .hero-actions{display:flex;gap:13px;flex-wrap:wrap}
+.parallax-hero .btn-light{background:#fff;color:#111;border:1px solid #fff}
+.parallax-hero .btn-light:hover{background:#eaf1ff;color:#111;border-color:#eaf1ff}
+.parallax-hero .btn-outline-light{background:transparent;color:white;border:1px solid rgba(255,255,255,.85)}
+.parallax-hero .btn-outline-light:hover{background:rgba(255,255,255,.13);color:white;border-color:white}
+.parallax-hero .hero-scroll-indicator{position:absolute;left:max(48px,calc((100% - 1440px)/2));bottom:38px;z-index:2;color:#fff;font-size:10px;letter-spacing:.15em;display:flex;gap:20px;align-items:center;opacity:.8}
+.parallax-hero .hero-scroll-indicator span{font-size:20px}
+body[data-page="home"] .site-header{position:fixed;width:100%;left:0;top:0;transition:background .32s,border-color .32s,box-shadow .32s}
+body[data-page="home"] .site-header.header-over-hero{background:transparent;border-color:transparent;box-shadow:none;backdrop-filter:none}
+body[data-page="home"] .site-header.header-over-hero .nav>a,body[data-page="home"] .site-header.header-over-hero .nav-brand-trigger,body[data-page="home"] .site-header.header-over-hero .menu-toggle{color:#fff}
+body[data-page="home"] .site-header.header-over-hero .nav>a:hover,body[data-page="home"] .site-header.header-over-hero .nav-brand-trigger:hover{color:#d1e5ff}
+body[data-page="home"] .site-header.header-over-hero .nav-submenu a{color:#25383a}
+body[data-page="home"] .site-header.header-over-hero .nav-submenu a:hover{color:#1C67FE}
+@media(max-width:760px){body[data-page="home"] .parallax-hero{min-height:88svh;align-items:flex-end}.parallax-hero .hero-content{padding-top:145px;padding-bottom:115px}.parallax-hero h1{font-size:clamp(37px,9vw,54px)}.parallax-hero .hero-description{font-size:15px}.parallax-hero .hero-bg{background-position:62% center}.parallax-hero .hero-scroll-indicator{left:18px;bottom:25px}body[data-page="home"] .site-header{background:rgba(255,255,255,.97)}}
+@media(prefers-reduced-motion:reduce){.parallax-hero .hero-bg{will-change:auto!important;transform:scale(1.06)!important}.parallax-hero *,body[data-page="home"] .site-header{transition:none!important}}
