@@ -147,3 +147,16 @@ body[data-page="home"] .site-header.header-over-hero .nav-submenu a{color:#25383
 body[data-page="home"] .site-header.header-over-hero .nav-submenu a:hover{color:#1C67FE}
 @media(max-width:760px){body[data-page="home"] .parallax-hero{min-height:88svh;align-items:flex-end}.parallax-hero .hero-content{padding-top:145px;padding-bottom:115px}.parallax-hero h1{font-size:clamp(37px,9vw,54px)}.parallax-hero .hero-description{font-size:15px}.parallax-hero .hero-bg{background-position:62% center}.parallax-hero .hero-scroll-indicator{left:18px;bottom:25px}body[data-page="home"] .site-header{background:rgba(255,255,255,.97)}}
 @media(prefers-reduced-motion:reduce){.parallax-hero .hero-bg{will-change:auto!important;transform:scale(1.06)!important}.parallax-hero *,body[data-page="home"] .site-header{transition:none!important}}
+
+/* Hero refinement: smaller headline, no decorative circles, very slow horizontal movement */
+body[data-page="home"] .parallax-hero:after,
+body[data-page="home"] .parallax-hero:before,
+body[data-page="home"] .hero:after,
+body[data-page="home"] .hero:before{content:none!important;display:none!important}
+body[data-page="home"] .parallax-hero h1{font-size:clamp(36px,4vw,58px);line-height:1.16;max-width:940px;font-weight:600;letter-spacing:-.045em}
+body[data-page="home"] .parallax-hero .hero-description{font-size:16px;line-height:1.78}
+body[data-page="home"] .parallax-hero .hero-bg{inset:-7%;animation:kaisunHeroDrift 34s ease-in-out infinite alternate;transform:translate3d(-1.2%,0,0) scale(1.075);will-change:transform}
+body[data-page="home"] .parallax-hero .hero-overlay{background:linear-gradient(90deg,rgba(7,34,96,.54) 0%,rgba(8,42,116,.25) 50%,rgba(8,42,116,.08) 100%)}
+@keyframes kaisunHeroDrift{from{transform:translate3d(-1.2%,0,0) scale(1.075)}to{transform:translate3d(1.2%,0,0) scale(1.075)}}
+@media(max-width:760px){body[data-page="home"] .parallax-hero h1{font-size:clamp(30px,8vw,43px)}body[data-page="home"] .parallax-hero .hero-description{font-size:15px}body[data-page="home"] .parallax-hero .hero-bg{animation-duration:42s}}
+@media(prefers-reduced-motion:reduce){body[data-page="home"] .parallax-hero .hero-bg{animation:none!important;transform:scale(1.075)!important;will-change:auto!important}}
