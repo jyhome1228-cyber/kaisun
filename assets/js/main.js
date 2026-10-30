@@ -6,7 +6,7 @@
  if(reduce.matches||!('IntersectionObserver' in window))return;
  const main=document.querySelector('main');if(!main)return;
  const selectors=[
-  '.page-intro .container','.hero-content','.content-heading','.editorial-heading',
+  '.page-intro .container','.content-heading','.editorial-heading',
   '.content-image-slot','.content-brand-grid>a','.content-pair>a',
   '.content-triple>article','.brand-visual-grid>figure','.research-archive-item',
   '.ks-solution-copy','.ks-solution-image','.ks-sus-image',
