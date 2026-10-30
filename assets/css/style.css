@@ -430,3 +430,50 @@ body[data-brand] main .btn.btn-dark:hover{filter:brightness(.9)}
 body[data-brand] main .brand-status{color:var(--brand-accent);border-color:var(--brand-accent)}
 body[data-brand] main a:focus-visible{outline-color:var(--brand-accent)}
 /* The shared navigation and footer deliberately keep KAISUNCELL blue. */
+
+
+/* Mobile QA fixes — 2026-10-30: consistent black CTAs and stable media sizing */
+body main a.btn,
+body main button.btn,
+body main .btn.btn-dark,
+body[data-brand] main .btn.btn-dark,
+body main .parallax-hero .btn-light,
+body main .parallax-hero .btn-outline-light{
+  background:#111!important;border:1px solid #111!important;color:#fff!important;
+  box-shadow:none!important;
+}
+body main a.btn:hover,
+body main button.btn:hover,
+body main .btn.btn-dark:hover,
+body[data-brand] main .btn.btn-dark:hover,
+body main .parallax-hero .btn-light:hover,
+body main .parallax-hero .btn-outline-light:hover{
+  background:#333!important;border-color:#333!important;color:#fff!important;filter:none!important;
+}
+body main .ks-sus-principles article{grid-template-columns:minmax(0,1fr)!important}
+body main .ks-sus-principles article>div{min-width:0;width:100%}
+body main .ks-sus-principles h3{overflow-wrap:normal;word-break:normal;white-space:normal}
+body main .content-split>*{min-width:0}
+body main .content-image-slot img{max-width:100%}
+@media(max-width:760px){
+ body main .ks-sus-principles{display:grid;grid-template-columns:minmax(0,1fr)}
+ body main .ks-sus-principles article{display:block!important;min-width:0;padding:22px 0}
+ body main .ks-sus-principles h3{font-size:clamp(19px,5.2vw,24px)!important;line-height:1.35}
+ body[data-page="home"] main .home-company-symbol{
+   width:min(100%,340px);height:auto!important;max-height:290px;
+   aspect-ratio:1.25/1!important;margin:0 auto;overflow:hidden!important;
+ }
+ body[data-page="home"] main .home-company-symbol img{
+   width:100%;height:100%;max-height:290px!important;object-fit:contain!important;
+ }
+ body main .dentiai-story .dentiai-visual,
+ body main .brand-visual-grid .brand-visual-item,
+ body main .content-image-slot:not(.home-company-symbol){
+   max-height:360px;overflow:hidden;
+ }
+ body main .dentiai-story .dentiai-visual{aspect-ratio:4/3}
+ body main .dentiai-story .dentiai-visual img{height:100%;object-fit:cover}
+ body main .cta .btn{min-height:46px;padding:12px 22px;align-self:flex-start}
+ body main .parallax-hero .hero-actions{gap:10px}
+ body main .parallax-hero .hero-actions .btn{width:auto;max-width:100%;min-height:46px}
+}
