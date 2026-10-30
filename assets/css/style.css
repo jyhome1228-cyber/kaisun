@@ -490,3 +490,28 @@ body[data-page="home"] main .parallax-hero .hero-actions a.btn,
 body[data-page="home"] main .parallax-hero .hero-actions .btn-light,
 body[data-page="home"] main .parallax-hero .hero-actions .btn-outline-light{background:#fff!important;color:#1C67FE!important;border-color:#fff!important;box-shadow:none!important}
 body[data-page="home"] main .parallax-hero .hero-actions a.btn:hover{background:#f1f6ff!important;color:#1454d6!important;border-color:#f1f6ff!important}
+
+
+/* KAISUNCELL universal subtle motion v1 */
+/* No changes to size, spacing, typography, existing brand colors or layout. */
+@media(prefers-reduced-motion:no-preference){
+ html.ks-motion-ready main .ks-motion-item{
+  opacity:0;transform:translate3d(0,14px,0);
+  transition:opacity 620ms cubic-bezier(.22,1,.36,1),transform 620ms cubic-bezier(.22,1,.36,1);
+  transition-delay:var(--ks-motion-delay,0ms);
+ }
+ html.ks-motion-ready main .ks-motion-item.ks-motion-visible{opacity:1;transform:none}
+ main .content-brand-grid>a,
+ main .content-pair>a,
+ main .brand-visual-item,
+ main .card,
+ main .content-line{transition:box-shadow .25s ease,filter .25s ease}
+ @media(hover:hover) and (pointer:fine){
+  main .content-brand-grid>a:hover .content-image-slot img,
+  main .content-pair>a:hover .content-image-slot img{filter:brightness(.97)}
+  main .content-line:hover{filter:brightness(.86)}
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ html.ks-motion-ready main .ks-motion-item{opacity:1!important;transform:none!important;transition:none!important}
+}
