@@ -527,3 +527,22 @@ body[data-page="technology"] .ks-tech-material-values .tech-values h3{font-size:
 body[data-page="technology"] .ks-tech-material-values .tech-values h4{font-size:16px;line-height:1.5;margin:0 0 12px}
 body[data-page="technology"] .ks-tech-material-values .tech-values p{font-size:15px;line-height:1.75;margin:0;word-break:keep-all}
 @media(max-width:760px){body[data-page="technology"] .ks-tech-material-values .content-image-slot.wide{margin:25px 0 24px;border-radius:14px}body[data-page="technology"] .ks-tech-material-values .content-image-slot.wide img{max-height:270px}body[data-page="technology"] .ks-tech-material-values .tech-values{grid-template-columns:1fr!important;gap:18px}body[data-page="technology"] .ks-tech-material-values .tech-values article{padding:20px 0 0}body[data-page="technology"] .ks-tech-material-values .tech-values h3{font-size:21px}}
+
+/* Technology material value spacing refinement */
+body[data-page="technology"] .ks-tech-material-values .content-image-slot.wide{
+ aspect-ratio:auto!important;height:auto!important;min-height:0!important;
+ margin:26px 0 18px!important;
+}
+body[data-page="technology"] .ks-tech-material-values .content-image-slot.wide img{
+ width:100%;height:clamp(240px,30vw,450px)!important;max-height:none!important;object-fit:cover;
+}
+body[data-page="technology"] .ks-tech-material-values .tech-values article{
+ border-top:0!important;border-bottom:0!important;padding:0!important;
+}
+body[data-page="technology"] .ks-tech-material-values .tech-values article::before,
+body[data-page="technology"] .ks-tech-material-values .tech-values article::after{display:none!important}
+@media(max-width:760px){
+ body[data-page="technology"] .ks-tech-material-values .content-image-slot.wide{margin:22px 0 16px!important}
+ body[data-page="technology"] .ks-tech-material-values .content-image-slot.wide img{height:220px!important}
+ body[data-page="technology"] .ks-tech-material-values .tech-values{gap:24px}
+}
