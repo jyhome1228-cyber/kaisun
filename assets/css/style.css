@@ -515,3 +515,15 @@ body[data-page="home"] main .parallax-hero .hero-actions a.btn:hover{background:
 @media(prefers-reduced-motion:reduce){
  html.ks-motion-ready main .ks-motion-item{opacity:1!important;transform:none!important;transition:none!important}
 }
+
+
+/* Technology material values: image above three columns */
+body[data-page="technology"] .ks-tech-material-values .content-image-slot.wide{width:100%;margin:34px 0 32px;overflow:hidden;border-radius:18px}
+body[data-page="technology"] .ks-tech-material-values .content-image-slot.wide img{display:block;width:100%;height:auto;max-height:480px;object-fit:cover}
+body[data-page="technology"] .ks-tech-material-values .tech-values{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:24px;width:100%;margin:0}
+body[data-page="technology"] .ks-tech-material-values .tech-values article{display:block!important;grid-template-columns:none!important;min-width:0;width:100%;border-top:1px solid #e5e8ee;padding:24px 0 0;margin:0}
+body[data-page="technology"] .ks-tech-material-values .tech-values article>div{display:block!important;width:100%;min-width:0;max-width:none}
+body[data-page="technology"] .ks-tech-material-values .tech-values h3{font-size:clamp(19px,1.65vw,24px);line-height:1.3;margin:0 0 14px;overflow-wrap:break-word;word-break:normal}
+body[data-page="technology"] .ks-tech-material-values .tech-values h4{font-size:16px;line-height:1.5;margin:0 0 12px}
+body[data-page="technology"] .ks-tech-material-values .tech-values p{font-size:15px;line-height:1.75;margin:0;word-break:keep-all}
+@media(max-width:760px){body[data-page="technology"] .ks-tech-material-values .content-image-slot.wide{margin:25px 0 24px;border-radius:14px}body[data-page="technology"] .ks-tech-material-values .content-image-slot.wide img{max-height:270px}body[data-page="technology"] .ks-tech-material-values .tech-values{grid-template-columns:1fr!important;gap:18px}body[data-page="technology"] .ks-tech-material-values .tech-values article{padding:20px 0 0}body[data-page="technology"] .ks-tech-material-values .tech-values h3{font-size:21px}}
