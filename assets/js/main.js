@@ -29,3 +29,20 @@
  });
  document.documentElement.classList.add('ks-motion-ready');
 })();
+
+
+/* KAISUNCELL privacy-conscious visitor analytics — requires dedicated API backend */
+(()=>{'use strict';
+ const api=(window.KAISUNCELL_ANALYTICS_API||window.KAISUNCELL_ADMIN_API||'').replace(/\/$/,'');
+ if(!api||location.pathname.includes('/admin/'))return;
+ const qs=new URLSearchParams(location.search);
+ const clean=(s,n=120)=>String(s||'').trim().slice(0,n);
+ let ref='';try{if(document.referrer){const u=new URL(document.referrer);if(u.hostname!==location.hostname)ref=clean(u.hostname.replace(/^www\./,''));}}catch{}
+ let source=clean(qs.get('utm_source'),80);
+ if(!source)source=!ref?'direct':/(^|\.)google\./i.test(ref)?'Google':/(^|\.)naver\.com$/i.test(ref)?'Naver':/daum\.net|kakao/i.test(ref)?'Daum/Kakao':/instagram\.com/i.test(ref)?'Instagram':/facebook\.com/i.test(ref)?'Facebook':ref;
+ const date=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());
+ const key='kaisuncell-visit-'+date;
+ let newToday=false;try{newToday=!sessionStorage.getItem(key);}catch{}
+ const event={date,source,referrerHost:ref,landing:clean(location.pathname,160),campaign:clean(qs.get('utm_campaign'),100),medium:clean(qs.get('utm_medium'),80),keyword:clean(qs.get('utm_term'),100),isNewSessionToday:newToday};
+ fetch(api+'/api/visitors/event',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(event),keepalive:true,credentials:'omit'}).then(r=>{if(r.ok&&newToday){try{sessionStorage.setItem(key,'1')}catch{}}}).catch(()=>{});
+})();
