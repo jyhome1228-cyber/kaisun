@@ -1,1 +1,4 @@
 CREATE TABLE IF NOT EXISTS inquiries (id TEXT PRIMARY KEY, created_at TEXT NOT NULL DEFAULT (strftime('%Y-%m-%dT%H:%M:%fZ','now')), type TEXT NOT NULL, company TEXT, name TEXT NOT NULL, email TEXT NOT NULL, phone TEXT, subject TEXT NOT NULL, message TEXT NOT NULL, status TEXT NOT NULL DEFAULT 'new' CHECK(status IN ('new','in_progress','done'))); CREATE INDEX IF NOT EXISTS idx_inquiries_created ON inquiries(created_at DESC); CREATE INDEX IF NOT EXISTS idx_inquiries_status ON inquiries(status,created_at DESC);
+CREATE TABLE IF NOT EXISTS visits (id TEXT PRIMARY KEY, date TEXT NOT NULL, created_at TEXT NOT NULL, path TEXT NOT NULL, source TEXT NOT NULL, referrer_host TEXT, campaign TEXT, medium TEXT, keyword TEXT);
+CREATE INDEX IF NOT EXISTS idx_visits_date ON visits(date);
+CREATE INDEX IF NOT EXISTS idx_visits_source ON visits(source);
