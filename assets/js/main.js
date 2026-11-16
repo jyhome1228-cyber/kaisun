@@ -44,5 +44,6 @@
  const key='kaisuncell-visit-'+date;
  let newToday=false;try{newToday=!sessionStorage.getItem(key);}catch{}
  const event={date,source,referrerHost:ref,landing:clean(location.pathname,160),campaign:clean(qs.get('utm_campaign'),100),medium:clean(qs.get('utm_medium'),80),keyword:clean(qs.get('utm_term'),100),isNewSessionToday:newToday};
- fetch(api+'/api/visitors/event',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(event),keepalive:true,credentials:'omit'}).then(r=>{if(r.ok&&newToday){try{sessionStorage.setItem(key,'1')}catch{}}}).catch(()=>{});
+ const send=()=>{if(!api)return;fetch(api+'/api/visitors/event',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(event),keepalive:true,credentials:'omit'}).then(r=>{if(r.ok&&newToday){try{sessionStorage.setItem(key,'1')}catch{}}}).catch(()=>{});};
+ if(api)send();else fetch((document.documentElement.dataset.root||'./')+'api-config.json',{cache:'no-store'}).then(r=>r.ok?r.json():{}).then(c=>{api=String(c.apiBaseUrl||'').replace(/\\/$/,'');send()}).catch(()=>{});
 })();
